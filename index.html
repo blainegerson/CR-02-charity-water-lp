@@ -1,47 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Water Run | charity: water</title>
+
+  <!-- Google Font substitute for Proxima Nova / Avenir -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --yellow: #FFC907;
+      --blue: #2E9DF7;
+      --light-blue: #8BD1CB;
+      --green: #4FCB53;
+      --orange: #FF902A;
+      --red: #F5402C;
+      --dark-green: #159A48;
+      --pink: #F16061;
+      --dark: #111;
+      --light: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .logo {
+      height: 45px;
+    }
+
+    .nav-btn {
+      background: var(--yellow);
+      color: black;
+      padding: 0.7rem 1.4rem;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-btn:hover {
+      background: var(--orange);
+      transform: translateY(-2px);
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/water-can-transparent.png') center/contain no-repeat, var(--blue);
+      color: white;
+      text-align: center;
+      padding: 7rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+
+    .cta-primary {
+      background: var(--yellow);
+      color: black;
+      padding: 1rem 2rem;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .cta-primary:hover {
+      background: var(--orange);
+      transform: scale(1.05);
+    }
+
+    .section {
+      padding: 5rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .section h2 {
+      color: var(--blue);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .impact-stats {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--dark-green);
+    }
+
+    .story-image {
+      margin-top: 2rem;
+      max-width: 600px;
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .cta-section {
+      background: var(--yellow);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      margin-bottom: 1rem;
+    }
+
+    .cta-section a {
+      background: black;
+      color: white;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 6px;
+      transition: 0.3s ease;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    .cta-section a:hover {
+      background: var(--blue);
+    }
+
+    footer {
+      background: black;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    footer img {
+      height: 35px;
+      margin-bottom: 1rem;
+    }
+
+    footer a {
+      color: var(--yellow);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .impact-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <!-- Hero Section: This is the main banner at the top of the page -->
-    <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
-    </section>
 
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
-        <p>
-         
-    </section>
+<header>
+  <img src="img/cw_logo.png" alt="charity: water logo" class="logo">
+  <a href="#play" class="nav-btn">Play the Game</a>
+</header>
 
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
-        </div>
-    </section>
+<section class="hero">
+  <h1>Water Run: 60 Seconds for Change</h1>
+  <p>Experience how clean water transforms communities. Play, learn, and see the impact unfold in real time.</p>
+  <a href="#play" class="cta-primary">Start Playing</a>
+</section>
 
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
-    </section>
+<section class="section">
+  <h2>Why Clean Water Matters</h2>
+  <p>771 million people still lack access to clean water. Clean water improves health, education, and economic opportunity for entire communities.</p>
+
+  <div class="impact-stats">
+    <div class="stat">771M+</div>
+    <div class="stat">29 Countries</div>
+    <div class="stat">100% Public Donations Fund Projects</div>
+  </div>
+
+  <img src="img/water-can-transparent.png" alt="charity water jerry can" class="story-image">
+</section>
+
+<section class="cta-section" id="play">
+  <h2>Be Part of the Change</h2>
+  <p>Play the game. Share it. Help bring clean water to communities worldwide.</p>
+  <a href="https://www.charitywater.org" target="_blank">Learn More at charitywater.org</a>
+</section>
+
+<footer>
+  <img src="img/cw_logo-2.png" alt="charity: water logo">
+  <p>Inspired by the mission of charity: water.</p>
+  <p><a href="https://www.charitywater.org" target="_blank">Visit charitywater.org</a></p>
+</footer>
+
 </body>
 </html>
